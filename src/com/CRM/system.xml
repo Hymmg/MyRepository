@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	
+
+
+<constant name="struts.ui.theme" value="simple"></constant>
+<constant name="struts.custom.i18n.resources" value="message"></constant>
+	
+	
+	<package name="system" namespace="/" extends="struts-default">
+		
+		<action name="login" class="com.CRM.system.web.action.LoginAction" method="login">
+			<result name="success" >/main.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+        
+        <action name="main">
+        <result name="success">/system/page/manager_role.jsp</result>
+        </action>
+        
+        <action name="search" class="com.CRM.system.web.action.RoleAction" method="search">
+           <result name="success" type="chain">main</result>
+        </action>
+
+        <action name="rolefenYe" class="com.CRM.system.web.action.RoleAction" method="rolefenYe">
+           <result name="success">/system/page/manager_role.jsp</result>
+        </action> 
+        
+        <!-- 只是测试日历，与项目无关 -->
+        <action name="date" class="com.CRM.system.web.action.RoleAction" method="date">
+        <result name="success">/system/page/date.jsp</result>
+        </action> 
+        
+        <action name="goAddRole" class="com.CRM.system.web.action.RoleAction" method="goAddRole">
+           <result name="success" >/system/page/add_role.jsp</result>
+        </action>
+        
+        <action name="goUpdateRole" class="com.CRM.system.web.action.RoleAction" method="goUpdateRole">
+           <result name="success">/system/page/update_role.jsp</result>
+        </action>
+
+        <action name="goDeleteRole" class="com.CRM.system.web.action.RoleAction" method="goDeleteRole">
+           <result name="success" type="chain">rolefenYe</result>
+        </action>
+        
+        <action name="addRole" class="com.CRM.system.web.action.RoleAction" method="addRole">
+           <result name="success" type="chain">rolefenYe</result>
+        </action>
+        
+        
+        
+        <!-- 员工 -->
+        
+        <action name="usersfenYe" class="com.CRM.system.web.action.UsersAction" method="usersfenYe">
+           <result name="success">/system/page/manager_users.jsp</result>
+        </action> 
+        
+        <action name="userssearch" class="com.CRM.system.web.action.UsersAction" method="userssearch">
+           <result name="success">/system/page/manager_users.jsp</result>
+        </action>
+        
+        
+        <action name="goAddUsers" class="com.CRM.system.web.action.UsersAction" method="goAddUsers">
+           <result name="success" >/system/page/add_users.jsp</result>
+        </action>
+        
+        <action name="goUpdateUsers" class="com.CRM.system.web.action.UsersAction" method="goUpdateUsers">
+           <result name="success">/system/page/update_users.jsp</result>
+        </action>
+
+        <action name="goDeleteUsers" class="com.CRM.system.web.action.UsersAction" method="goDeleteUsers">
+           <result name="success" type="chain">usersfenYe</result>
+        </action>
+        
+        <action name="addUsers" class="com.CRM.system.web.action.UsersAction" method="addUsers">
+           <result name="success" type="redirectAction">usersfenYe</result>
+        </action>
+		
+		
+		
+		<action name="goShowUsers" class="com.CRM.system.web.action.UsersAction" method="goUpdateUsers">
+		   <result name="success" >/system/page/show_users.jsp</result>
+		</action>
+		
+		
+		
+		<!-- 个人信息 -->
+		<action name="goMessageUsers" class="com.CRM.system.web.action.UsersAction" method="goMessageUsers">
+		   <result name="success" >/system/page/message_users.jsp</result>
+		</action><!-- 去修改登录名-->
+		
+		<action name="messageName" class="com.CRM.system.web.action.UsersAction" method="messageName">
+		   <result name="success" >/login.jsp</result>
+		</action><!-- 修改登录名-->
+		
+		<action name="goMessagePassword" class="com.CRM.system.web.action.UsersAction" method="goMessagePassword">
+		   <result name="success" >/system/page/update_password.jsp</result>
+		</action><!-- 去修改密码-->
+		
+		<action name="messagePassword" class="com.CRM.system.web.action.UsersAction" method="messagePassword">
+		   <result name="success" >/login.jsp</result>
+		   <result name="error" type="chain" >goMessagePassword</result>
+		</action><!-- 修改密码-->
+		
+	</package>
+</struts>    

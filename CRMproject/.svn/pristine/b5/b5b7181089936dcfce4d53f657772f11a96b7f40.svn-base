@@ -1,0 +1,106 @@
+.tr_css{
+	height: 50px;
+	border: 0px red solid;
+}
+.td1_css{
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+.input_css{
+	width: calc(80%);
+	border-radius: 5px;
+	border-color: #DDE6EE;
+	background-color: #F7FBFF;
+	/*box-shadow: 1px 1px 3px #000;*/
+	height: 25px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+.input_focus{
+	border-color: #70A8FA;
+}
+.input_sex{
+	width: 18px;
+	height: 18px;
+	background-color: white;
+	margin-left: calc(10%);
+	position: relative;
+	vertical-align: middle;
+}
+.select_bir{
+	width: calc(22%);
+}
+.checkbox_read{
+	width: 14px;
+	height: 14px;
+	position: relative;
+	vertical-align: middle;
+	/*border-radius: 5px;
+	border-color: #DDE6EE;
+	background-color: #F7FBFF;*/
+}
+.register_button .login_button{
+	border: 0;
+	border-radius: 0;
+	width: calc(80%);
+	height: 45px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#86CF65,endColorStr=#63B53F); /*IE*/
+	background: -moz-linear-gradient(top,#86CF65,#63B53F);/*火狐*/
+	background: -webkit-gradient(linear,0% 0%,0% 100%,from(#86CF65),to(#63B53F));/*谷歌*/
+	font-size: 20px;
+	color: white;
+}
+.register_button_mousedown .login_button_mousedown{
+	/*filter:alpha(opacity="90");
+    Opacity:0.9;*/
+   FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#8DDF65,endColorStr=#6DD53F);/*IE*/
+   background: -moz-linear-gradient(top,#8DDF65,#6DD53F);/*火狐*/
+   background: -webkit-gradient(linear,0% 0%,0% 100%,from(#8DDF65),to(#6DD53F));/*谷歌*/
+}
+.span_read{
+	font-size: 14px;
+	font-weight: bold;
+	position: relative;
+	vertical-align: middle;
+}
+.warn_span{
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+.warn_span2{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: red;
+}
+.sex_span{
+	position: relative;
+	vertical-align: middle;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.a_yzm{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+.a_yzm:hover{
+	text-decoration: underline;
+}
+.check_right_color{
+	color: green;
+}
+.check_wrong_color{
+	color: red;
+}
+.checkbox_read_border{
+	 border: 1px solid red;
+}
+.inithead{
+	width: 80px;
+	height: 80px;
+	vertical-align: middle;
+}
+.btn2{
+	width: 40%;
+	vertical-align: bottom;
+}

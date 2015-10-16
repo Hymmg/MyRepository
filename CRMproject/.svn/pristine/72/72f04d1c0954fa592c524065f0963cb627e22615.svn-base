@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<include file="com/CRM/system.xml"></include>
+	<include file="com/CRM/sale.xml"></include>
+	<include file="com/CRM/customer.xml"></include>
+	<include file="com/CRM/service.xml"></include>
+	<include file="com/CRM/compact.xml"></include>
+</struts>    

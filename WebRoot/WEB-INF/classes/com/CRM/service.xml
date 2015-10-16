@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="service" namespace="/" extends="struts-default">
+<action name="fenYeServ" class="com.CRM.service.web.action.EstabServAction"  method="fenYe">
+<result name="success">/service/cj.jsp</result>
+
+</action>
+<action name="goXiuGaiServ" class="com.CRM.service.web.action.EstabServAction" method="huoQuSerInfo">
+<result name="success" >/service/xiugai.jsp</result>
+
+</action>
+<action name="baoCun" class="com.CRM.service.web.action.EstabServAction" method="baoCun">
+<result name="success" type="redirectAction">fenYeServ</result>
+<result name="error" type="redirectAction">goXiuGaiServ</result>
+</action>
+
+<action name="quDeleteServ" class="com.CRM.service.web.action.EstabServAction" method="quDeleteServ">
+<result name="success" type="redirectAction">fenYeServ</result>
+</action>
+<action name="showServ" class="com.CRM.service.web.action.EstabServAction" method="showServ">
+<result name="success">/service/showServ.jsp</result>
+</action>
+<action name="index">
+<result name="success">/service/cj.jsp</result>
+</action>
+<action name="souSuoServ" class="com.CRM.service.web.action.EstabServAction" method="souSuoServ">
+<result name="success" type="chain">index</result>
+</action>
+<action name="goFenPeiServ" class="com.CRM.service.web.action.EstabServAction" method="goFenPeiServ">
+<result name="success">/service/allocateServ.jsp</result>
+</action>
+<action name="souSuoServ1" class="com.CRM.service.web.action.EstabServAction" method="souSuoServ">
+<result name="success" type="chain">index1</result>
+</action>
+<action name="index1">
+<result name="success">/service/allocaMainSer.jsp</result>
+</action>
+
+<action name="tackleServ" class="com.CRM.service.web.action.EstabServAction" method="tackleServ">
+<result name="success" type="redirectAction">tackleFenYeServ</result>
+</action>
+
+<action name="tackleFenYeServ" class="com.CRM.service.web.action.EstabServAction" method="tackleFenYeServ">
+<result name="success">/service/tackleMainSer.jsp</result>
+</action>
+<action name="goTackleServ" class="com.CRM.service.web.action.EstabServAction" method="goTackleServ">
+<result name="success">/service/tackleServ.jsp</result>
+</action>
+<action name="fenPeiServ" class="com.CRM.service.web.action.EstabServAction" method="fenPeiServ">
+<result name="success" type="redirectAction">goFenPeiMainServ</result>
+
+</action>
+<action name="goFenPeiMainServ" class="com.CRM.service.web.action.EstabServAction" method="goFenPeiMainServ">
+<result name="success">/service/allocaMainSer.jsp</result>
+</action>
+<action name="goFeedBackMainServ" class="com.CRM.service.web.action.EstabServAction" method="goFeedBackMainServ">
+<result name="success">/service/feedBackMainServ.jsp</result>
+</action>
+<action name="goFeedBackServ" class="com.CRM.service.web.action.EstabServAction" method="goFeedBackServ">
+<result name="success">/service/feedBackServ.jsp</result>
+</action>
+<action name="feedBackServ" class="com.CRM.service.web.action.EstabServAction" method="feedBackServ">
+<result name="success" type="redirectAction">goFeedBackMainServ</result>
+</action>
+<action name="goGuiDangMainServ" class="com.CRM.service.web.action.EstabServAction" method="goGuiDangMainServ">
+<result name="success">/service/guiDangMainServ.jsp</result>
+</action>
+<action name="goGuiDangServ" class="com.CRM.service.web.action.EstabServAction" method="goGuiDangServ">
+<result name="success" type="redirectAction">goGuiDangMainServ</result>
+</action>
+<action name="goComProMangMainServ" class="com.CRM.service.web.action.ComProManServAction" method="goComProMangMainServ">
+<result name="success">/service/comProManMainServ.jsp</result>
+</action>
+<action name="quSubmitServ" class="com.CRM.service.web.action.EstabServAction" method="quSubmitServ">
+<result name="success" type="redirectAction">fenYeServ</result>
+</action>
+</package>
+
+</struts>    
